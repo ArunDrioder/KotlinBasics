@@ -1,25 +1,19 @@
 fun main(args : Array<String>)
 {
-    println("Enter first number")
+    println("Enter two numbers")
 
-    val a= Integer.valueOf(readLine())
-    println("Enter Second number")
+    var a = Integer.valueOf(readLine())
+    var b = Integer.valueOf(readLine())
 
-    val b = Integer.valueOf(readLine())
+    var result : Int = productOf (a,b)
 
-    val arithmeticObj = Arithmetic();
-    arithmeticObj.doMath(a,b)
+    println(result)
+
+}
+
+fun productOf(a: Int, b: Int): Int {
+
+    return a*b
 
 }
 
-class Arithmetic
-{
-    fun doMath(a: Int, b: Int)
-    {
-      println("The Addition of $a and $b is : ${a+b}")
-      println("The Subtraction of $a and $b is : ${a-b}")
-      println("The Multiplication of $a and $b is : ${a*b}")
-      println("The Division of $a and $b is : ${a/b}")
-    }
-
-}
